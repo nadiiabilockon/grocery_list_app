@@ -12,7 +12,8 @@ export default function InputProduct() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body),
             });
-            console.log(response)
+
+            window.location.reload(false)
         } catch (error) {
             console.log(error);
         }
@@ -24,7 +25,7 @@ export default function InputProduct() {
             <form className="d-flex mt-5" onSubmit={onSubmitForm}>
                 <input
                     type="text"
-                    className="form-control"
+                    className="form-control mr-1"
                     onChange={(e) => setProdName(e.target.value)}
                 />
                 <button className="btn btn-success">Add</button>
